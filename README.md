@@ -28,7 +28,7 @@ DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/Site
 ## Installation  
 
 ### Step 1: Install the RPM Package  
-Run the following command to install DevOps-GPT Agent:  
+Run the following command in RedHat to install DevOps-GPT Agent:  
 ```bash
 rpm -ivh https://github.com/thedevops-gpt/devops-gpt/blob/main/devops-gpt-0.0.1.x86_64.rpm
 ```
@@ -55,9 +55,9 @@ Choose LLM provider:
 1. OpenAI (requires API key)
 2. Ollama (local LLM)
 
-- Enter OpenAI API key: Provide your OpenAI API key (Get your key here).
+- Enter OpenAI API key: Provide your OpenAI API key (https://platform.openai.com/api-keys).
 - Enable Slack notifications? (y/n): Enable or disable Slack notifications.
-- Enter Slack webhook URL: Add your Slack Webhook URL (Learn more about Slack Webhooks).
+- Enter Slack webhook URL: Add your Slack Webhook URL (https://api.slack.com/messaging/webhooks).
 - The configuration is saved to /etc/devops-gpt/config.yaml.
 
 ### Step 3: Start and Enable the Service
