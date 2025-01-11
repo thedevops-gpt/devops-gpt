@@ -1,4 +1,4 @@
-# DevOps-GPT Agent 🚀  
+# DevOps-GPT Agent 🚀  ![DevOps-GPT logo](devops-gpt-logo.png)
 **Automating SRE Resolutions with AI-Powered Insights**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
