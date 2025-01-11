@@ -4,6 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
 [![Slack Notifications](https://img.shields.io/badge/Slack-Notifications-blue)](https://slack.com)
 
+## Architecture
 ![DevOps-GPT Agent](devops-gpt-agent.jpg)
 
 ## Overview  
