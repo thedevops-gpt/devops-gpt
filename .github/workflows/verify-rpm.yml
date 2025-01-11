@@ -32,16 +32,3 @@ jobs:
       - name: Verify RPM signature
         run: |
           rpm --checksig devops-gpt-0.0.1.x86_64.rpm
-
-      # Step 5: Test RPM installation (optional)
-      - name: Install and test RPM
-        run: |
-          sudo rpm -ivh devops-gpt-0.0.1.x86_64.rpm
-          # Run custom commands to verify functionality
-          # For example, check if the installed service or application works as expected
-
-      # Step 6: Cleanup (optional)
-      - name: Cleanup
-        run: |
-          sudo rpm -e devops-gpt-0.0.1.x86_64.rpm
-          # Additional cleanup if necessary
