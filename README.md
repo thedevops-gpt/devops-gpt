@@ -40,7 +40,7 @@ yum -y install python3-pip
 
 Run the following command in Ubuntu to install DevOps-GPT Agent:  
 ```bash
-dpkg -i https://github.com/thedevops-gpt/devops-gpt/blob/main/devops-gpt-0.0.1.x86_64.rpm
+wget -qO /tmp/devops-gpt-0.0.1.x86_64.deb https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.1-ubuntu/devops-gpt-0.0.1.x86_64.deb && sudo dpkg -i /tmp/devops-gpt-0.0.1.x86_64.deb
 ```
 
 ### Step 2: Configure the Agent
