@@ -38,11 +38,20 @@ Note: If you encounter dependency issues, resolve them with:
 yum -y install python3-pip
 ```
 
+Run the following command in Ubuntu to install DevOps-GPT Agent:  
+```bash
+dpkg -i https://github.com/thedevops-gpt/devops-gpt/blob/main/devops-gpt-0.0.1.x86_64.rpm
+```
+
 ### Step 2: Configure the Agent
 Run the configuration command and follow the prompts:
 
 ```bash
+#RedHat
 sudo devops-gpt-configure
+
+#Ubuntu
+/usr/libexec/devops-gpt/configure.sh
 ```
 Configuration Prompts:
 
