@@ -8,7 +8,7 @@
 
 
 ## Architecture
-![DevOps-GPT Agent](devops-gpt-agent.jpg)
+![DevOps-GPT Agent](devops-gpt-agent-worflow.jpg)
 
 ## Overview  
 DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/System Engineer/Site Reliability Engineering (SRE) workflows. Integrating AI, caching, and Slack notifications provides rapid resolutions to errors and incidents, leveraging existing knowledge and cutting-edge Large Language Models (LLMs).  
