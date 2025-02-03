@@ -43,9 +43,45 @@ yum -y install python3-pip
 Run the configuration command and follow the prompts:
 
 ```bash
-#RedHat
+#OpenAI
 sudo devops-gpt-configure
+Enter check interval in seconds [10]: 
+Enter batch size [1]: 
+Enter maximum errors per batch [10]: 
+Enter error window in seconds [3600]: 
+
+Available LLM providers:
+1. OpenAI (requires API key)
+2. Ollama (local)
+Choose LLM provider (1/2) [1]: 
+Enter OpenAI API key: sk-XXXXX
+Enable Slack notifications? (y/n) [y]: 
+Enter Slack webhook URL: https://hooks.slack.com/services/XXXXXXXXX
+Configuration saved to /etc/devops-gpt/config.yaml
 ```
+
+```bash
+# Ollama(DeepSeek or Llama3
+sudo devops-gpt-configure 
+Enter check interval in seconds [10]: 
+Enter batch size [1]: 
+Enter maximum errors per batch [10]: 
+Enter error window in seconds [3600]: 
+
+Available LLM providers:
+1. OpenAI (requires API key)
+2. Ollama (local)
+Choose LLM provider (1/2) [1]: 2
+
+Available Ollama models:
+1. Llama 3.3
+2. DeepSeek
+Choose Ollama model (1/2) [1]: 2
+Enable Slack notifications? (y/n) [y]: 
+Enter Slack webhook URL: https://hooks.slack.com/services/XXXXXX
+Configuration saved to /etc/devops-gpt/config.yaml
+```
+
 Configuration Prompts:
 
 - Enter check interval in seconds [10]: Set the interval between checks (default: 10 seconds).
