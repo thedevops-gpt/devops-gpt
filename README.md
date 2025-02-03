@@ -11,12 +11,12 @@
 ![DevOps-GPT Agent](devops-gpt-agent.jpg)
 
 ## Overview  
-DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/Site Reliability Engineering (SRE) workflows. Integrating AI, caching, and Slack notifications provides rapid resolutions to errors and incidents, leveraging existing knowledge and cutting-edge Large Language Models (LLMs).  
+DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/System Engineer/Site Reliability Engineering (SRE) workflows. Integrating AI, caching, and Slack notifications provides rapid resolutions to errors and incidents, leveraging existing knowledge and cutting-edge Large Language Models (LLMs).  
 
 ## How It Works  
 1. **Knowledge Base Lookup**: The agent first checks the existing SRE knowledge base to identify if the error is already documented.  
 2. **Cache Layer Validation**: If the error isn't found in the knowledge base, the agent queries the cache layer to determine if the resolution has been processed recently.  
-3. **AI Query via LLM**: If the error is not present in both the knowledge base and cache, the agent contacts the LLM of your choice, such as OpenAI's GPT models or Ollama's local LLM, to generate a resolution.  
+3. **AI Query via LLM**: If the error is not present in both the knowledge base and cache, the agent contacts the LLM of your choice, such as OpenAI's GPT models, LLama3 or DeepSeek, to generate a resolution.  
 4. **Resolution Delivery**: The final resolution is sent to a configured Slack channel, ensuring real-time updates and collaboration.  
 
 ## Features  
@@ -38,10 +38,6 @@ Note: If you encounter dependency issues, resolve them with:
 yum -y install python3-pip
 ```
 
-Run the following command in Ubuntu to install DevOps-GPT Agent:  
-```bash
-wget -qO /tmp/devops-gpt-0.0.1.x86_64.deb https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.1-ubuntu/devops-gpt-0.0.1.x86_64.deb && sudo dpkg -i /tmp/devops-gpt-0.0.1.x86_64.deb
-```
 
 ### Step 2: Configure the Agent
 Run the configuration command and follow the prompts:
@@ -49,9 +45,6 @@ Run the configuration command and follow the prompts:
 ```bash
 #RedHat
 sudo devops-gpt-configure
-
-#Ubuntu
-/usr/libexec/devops-gpt/configure.sh
 ```
 Configuration Prompts:
 
@@ -63,6 +56,7 @@ Configuration Prompts:
 Choose LLM provider:
 1. OpenAI (requires API key)
 2. Ollama (local LLM)
+3. DeepSeek (local LLM)
 
 - Enter OpenAI API key: Provide your OpenAI API key (https://platform.openai.com/api-keys).
 - Enable Slack notifications? (y/n): Enable or disable Slack notifications.
