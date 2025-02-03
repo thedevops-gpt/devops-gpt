@@ -30,7 +30,7 @@ DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/Syst
 ### Step 1: Install the RPM Package  
 Run the following command in RedHat to install DevOps-GPT Agent:  
 ```bash
-rpm -ivh https://github.com/thedevops-gpt/devops-gpt/blob/main/devops-gpt-0.0.1.x86_64.rpm
+rpm -ivh https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.1/devops-gpt-0.0.1-0.el9.x86_64.rpm
 ```
 Note: If you encounter dependency issues, resolve them with:
 
