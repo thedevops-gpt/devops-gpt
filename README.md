@@ -95,6 +95,7 @@ Choose LLM provider:
 - Enable Slack notifications? (y/n): Enable or disable Slack notifications.
 - Enter Slack webhook URL: Add your Slack Webhook URL (https://api.slack.com/messaging/webhooks).
 - The configuration is saved to /etc/devops-gpt/config.yaml.
+- Ollama Linux Installation (https://github.com/ollama/ollama/blob/main/docs/linux.md)
 
 ### Step 3: Start and Enable the Service
 Start the DevOps-GPT Agent service:
