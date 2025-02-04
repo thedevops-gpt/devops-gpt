@@ -8,7 +8,7 @@
 ![DevOps-GPT Agent](devops-gpt-agent-worflow.jpg)
 
 ## Overview  
-DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/System Engineer/Site Reliability Engineering (SRE) workflows. Integrating AI, caching, and Slack notifications provides rapid resolutions to errors and incidents, leveraging existing knowledge and cutting-edge Large Language Models (LLMs).  
+DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/System Engineer/Site Reliability Engineering (SRE) workflows. Integrating AI, caching, and Slack notifications provides rapid resolutions to errors and incidents, leveraging existing knowledge and cutting-edge Large Language Models (LLMs). DevOps-GPT Agent is now even more powerful with CloudWatch support!.  
 
 ## How It Works  
 1. **Knowledge Base Lookup**: The agent first checks the existing SRE knowledge base to identify if the error is already documented.  
@@ -20,14 +20,15 @@ DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/Syst
 - 🔍 **SRE Knowledge Integration**: Save time by reusing existing resolutions.  
 - ⚡ **Cache Layer Optimization**: Reduce redundant queries and improve performance.  
 - 🤖 **AI-Powered Assistance**: Get precise solutions from OpenAI GPT or Ollama models.  
-- 📩 **Slack Notifications**: Keep your team informed with automated updates.  
+- 📩 **Slack Notifications**: Keep your team informed with automated updates.
+- ☁️ CloudWatch Integration: Seamlessly read from centralized logs for faster, more efficient troubleshooting. 
 
 ## Installation  
 
 ### Step 1: Install the RPM Package  
 Run the following command in RedHat to install DevOps-GPT Agent:  
 ```bash
-rpm -ivh https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.1/devops-gpt-0.0.1-0.el9.x86_64.rpm
+rpm -ivh https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.2/devops-gpt-0.0.2-0.el9.x86_64.rpm
 ```
 Note: If you encounter dependency issues, resolve them with:
 
@@ -54,6 +55,12 @@ Choose LLM provider (1/2) [1]:
 Enter OpenAI API key: sk-XXXXX
 Enable Slack notifications? (y/n) [y]: 
 Enter Slack webhook URL: https://hooks.slack.com/services/XXXXXXXXX
+Enable CloudWatch logs monitoring? (y/n) [n]: y
+Enter AWS credentials for CloudWatch access:
+AWS Access Key ID: AKXXXXX
+AWS Secret Access Key: TKXXXXXXXXXXX
+AWS Region (e.g., us-east-1): us-west-2
+CloudWatch Log Group Name: my-cloudwatch-log-grouy
 Configuration saved to /etc/devops-gpt/config.yaml
 ```
 
@@ -76,6 +83,12 @@ Available Ollama models:
 Choose Ollama model (1/2) [1]: 2
 Enable Slack notifications? (y/n) [y]: 
 Enter Slack webhook URL: https://hooks.slack.com/services/XXXXXX
+Enable CloudWatch logs monitoring? (y/n) [n]: y
+Enter AWS credentials for CloudWatch access:
+AWS Access Key ID: AKXXXXX
+AWS Secret Access Key: TKXXXXXXXXXXX
+AWS Region (e.g., us-east-1): us-west-2
+CloudWatch Log Group Name: my-cloudwatch-log-grouy
 Configuration saved to /etc/devops-gpt/config.yaml
 ```
 
@@ -106,7 +119,7 @@ sudo systemctl enable devops-gpt
 
 ## Example Workflow
 
-1. Incident Detected: An application encounters an unexpected error.
+1. Incident Detected: An application encounters an unexpected error locally or from CloudWatch logs
 2. Resolution Process: The agent checks the SRE knowledge base and cache.
 3. If a resolution exists: Fetch it immediately.
 4. If not: Query the configured LLM to generate a solution.
