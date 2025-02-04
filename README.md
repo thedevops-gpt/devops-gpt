@@ -4,9 +4,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
 [![Slack Notifications](https://img.shields.io/badge/Slack-Notifications-blue)](https://slack.com)
 
-#![Verify RPM](https://github.com/thedevops-gpt/devops-gpt/actions/workflows/verify-rpm.yml/badge.svg)
-
-
 ## Architecture
 ![DevOps-GPT Agent](devops-gpt-agent-worflow.jpg)
 
