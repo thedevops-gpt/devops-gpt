@@ -117,6 +117,32 @@ sudo systemctl start devops-gpt
 sudo systemctl enable devops-gpt
 ```
 
+### Step 4: You can test it using tools like a logger.
+```bash
+logger -p user.err "Out of Memory (OOM) error: Process killed due to insufficient memory"
+```
+
+## Output
+```bash
+sudo journalctl -u devops-gpt -f
+Feb 01 20:16:20plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:20,463 - devops_gpt.error_patterns - INFO - DevOps GPT Error Analyzer initialized with 20 patterns
+Feb 01 20:16:20plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:20,463 - __main__ - INFO - DevOps GPT initialized with OLLAMA as LLM provider
+Feb 01 20:16:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:50,523 - devops_gpt.log_monitor - INFO - Found 2 new unique errors
+Feb 01 20:16:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:50,523 - __main__ - INFO - Found 2 new errors
+Feb 01 20:16:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:50,524 - __main__ - INFO - Processing batch of 2 errors
+Feb 01 20:16:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:50,524 - __main__ - INFO - Attempting to match errors with known patterns...
+Feb 01 20:16:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:50,524 - __main__ - INFO - No matching patterns found in local database. Contacting OLLAMA for analysis...
+Feb 01 20:16:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:50,524 - devops_gpt.llms.ollama_provider - WARNING - Running on CPU - this may take several minutes...
+Feb 01 20:16:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:50,525 - devops_gpt.llms.ollama_provider - INFO - Still processing... (0 seconds elapsed)
+Feb 01 20:16:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:16:50,525 - devops_gpt.llms.ollama_provider - INFO - Sending request to Ollama API (this may take 10-15 minutes on CPU)...
+Feb 01 20:17:20plakhera.devops-gpt.com[6617]: 2025-02-01 20:17:20,555 - devops_gpt.llms.ollama_provider - INFO - Still processing... (30 seconds elapsed)
+Feb 01 20:17:50plakhera.devops-gpt.com[6617]: 2025-02-01 20:17:50,585 - devops_gpt.llms.ollama_provider - INFO - Still processing... (60 seconds elapsed)
+Feb 01 20:18:04plakhera.devops-gpt.com[6617]: 2025-02-01 20:18:04,265 - devops_gpt.llms.ollama_provider - INFO - Ollama response received in 73.7 seconds
+Feb 01 20:18:04plakhera.devops-gpt.com[6617]: 2025-02-01 20:18:04,267 - devops_gpt.llms.ollama_provider - INFO - Successfully received analysis from Ollama
+Feb 01 20:18:04plakhera.devops-gpt.com[6617]: 2025-02-01 20:18:04,267 - __main__ - INFO - Sending analysis to Slack...
+Feb 01 20:18:04plakhera.devops-gpt.com[6617]: 2025-02-01 20:18:04,373 - __main__ - INFO - Successfully sent message to Slack
+```
+
 ## Example Workflow
 
 1. Incident Detected: An application encounters an unexpected error locally or from CloudWatch logs
