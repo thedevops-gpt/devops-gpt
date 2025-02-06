@@ -5,7 +5,7 @@
 [![Slack Notifications](https://img.shields.io/badge/Slack-Notifications-blue)](https://slack.com)
 
 ## Architecture
-![DevOps-GPT Agent](devops-gpt-cloudwatch.jpg)
+![DevOps-GPT Agent](devops-gpt-cloudtrail.jpg)
 
 ## Overview  
 DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/System Engineer/Site Reliability Engineering (SRE) workflows. Integrating AI, caching, and Slack notifications provides rapid resolutions to errors and incidents, leveraging existing knowledge and cutting-edge Large Language Models (LLMs). DevOps-GPT Agent is now even more powerful with AWS CloudWatch and CloudTrail support!.  
