@@ -8,7 +8,7 @@
 ![DevOps-GPT Agent](devops-gpt-cloudwatch.jpg)
 
 ## Overview  
-DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/System Engineer/Site Reliability Engineering (SRE) workflows. Integrating AI, caching, and Slack notifications provides rapid resolutions to errors and incidents, leveraging existing knowledge and cutting-edge Large Language Models (LLMs). DevOps-GPT Agent is now even more powerful with CloudWatch support!.  
+DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/System Engineer/Site Reliability Engineering (SRE) workflows. Integrating AI, caching, and Slack notifications provides rapid resolutions to errors and incidents, leveraging existing knowledge and cutting-edge Large Language Models (LLMs). DevOps-GPT Agent is now even more powerful with AWS CloudWatch and CloudTrail support!.  
 
 ## How It Works  
 1. **Knowledge Base Lookup**: The agent first checks the existing SRE knowledge base to identify if the error is already documented.  
@@ -21,14 +21,15 @@ DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/Syst
 - ⚡ **Cache Layer Optimization**: Reduce redundant queries and improve performance.  
 - 🤖 **AI-Powered Assistance**: Get precise solutions from OpenAI GPT or Ollama models.  
 - 📩 **Slack Notifications**: Keep your team informed with automated updates.
-- ☁️ CloudWatch Integration: Seamlessly read from centralized logs for faster, more efficient troubleshooting. 
+- ☁️ CloudWatch Integration: Seamlessly read from centralized logs for faster, more efficient troubleshooting.
+- ☁️ CloudTrail-Integration: Automatically analyze AWS API activity logs for security, auditing, and compliance.
 
 ## Installation  
 
 ### Step 1: Install the RPM Package  
 Run the following command in RedHat to install DevOps-GPT Agent:  
 ```bash
-rpm -ivh https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.2/devops-gpt-0.0.2-0.el9.x86_64.rpm
+rpm -ivh https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.3/devops-gpt-0.0.3-0.el9.x86_64.rpm
 ```
 Note: If you encounter dependency issues, resolve them with:
 
@@ -60,7 +61,8 @@ Enter AWS credentials for CloudWatch access:
 AWS Access Key ID: AKXXXXX
 AWS Secret Access Key: TKXXXXXXXXXXX
 AWS Region (e.g., us-east-1): us-west-2
-CloudWatch Log Group Name: my-cloudwatch-log-grouy
+CloudWatch Log Group Name: my-cloudwatch-log-group
+Enter CloudTrail Trail Name: my-demo-trail
 Configuration saved to /etc/devops-gpt/config.yaml
 ```
 
@@ -88,7 +90,8 @@ Enter AWS credentials for CloudWatch access:
 AWS Access Key ID: AKXXXXX
 AWS Secret Access Key: TKXXXXXXXXXXX
 AWS Region (e.g., us-east-1): us-west-2
-CloudWatch Log Group Name: my-cloudwatch-log-grouy
+CloudWatch Log Group Name: my-cloudwatch-log-group
+Enter CloudTrail Trail Name: my-demo-trail
 Configuration saved to /etc/devops-gpt/config.yaml
 ```
 
