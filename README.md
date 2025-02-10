@@ -24,6 +24,10 @@ DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/Syst
 - ☁️ CloudWatch Integration: Seamlessly read from centralized logs for faster, more efficient troubleshooting.
 - ☁️ CloudTrail-Integration: Automatically analyze AWS API activity logs for security, auditing, and compliance.
 
+## YouTube Video
+[![Introduction to DevOps GPT](devops-gpt-cloudtrail.jpg)](https://youtu.be/X7MXKN5L9-0?si=4N2wCgME7qqMYjew)
+
+
 ## Installation  
 
 ### Step 1: Install the RPM Package  
