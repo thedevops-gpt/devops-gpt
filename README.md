@@ -65,6 +65,7 @@ CloudWatch Log Group Name: my-cloudwatch-log-group
 Enter CloudTrail Trail Name: my-demo-trail
 Configuration saved to /etc/devops-gpt/config.yaml
 ```
+**Note**: Using OpenAI's API incurs costs based on the number of API calls you make.
 
 ```bash
 # Ollama(DeepSeek or Llama3
