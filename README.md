@@ -33,7 +33,11 @@ DevOps-GPT Agent is an innovative server-side solution to streamline DevOps/Syst
 ### Step 1: Install the RPM Package  
 Run the following command in RedHat to install DevOps-GPT Agent:  
 ```bash
-rpm -ivh https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.3/devops-gpt-0.0.3-0.el9.x86_64.rpm
+dnf install redis
+```
+
+```bash
+rpm -ivh https://github.com/thedevops-gpt/devops-gpt/releases/download/0.0.4/devops-gpt-0.0.3-0.el9.x86_64.rpm
 ```
 Note: If you encounter dependency issues, resolve them with:
 
@@ -119,10 +123,12 @@ Choose LLM provider:
 - Ollama Linux Installation (https://github.com/ollama/ollama/blob/main/docs/linux.md)
 
 ### Step 3: Start and Enable the Service
-Start the DevOps-GPT Agent service:
+Start and enable the DevOps-GPT Agent and Redis service:
 ```bash
 sudo systemctl start devops-gpt
+sudo systemctl start redis
 sudo systemctl enable devops-gpt
+sudo systemctl enable redis
 ```
 
 ### Step 4: You can test it using tools like a logger.
